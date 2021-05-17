@@ -29,6 +29,10 @@ window.onload=function() { //charger la page complete
     }
     
 function jeu(){
+
+    // Si fin de jeu, on arrête le script
+    if (endGame()) return;
+
     contexte.clearRect(0, 0, canvas.width, canvas.height);
     x+=deplacementX*largeur;
     y+=deplacementY*hauteur;
@@ -134,5 +138,14 @@ function keyboard(evt){
         }
 
 }
+
+// Fonction fin de jeu
+function endGame() {  
+    const percuteMurGauche = x < 0;
+    const percuteMurDroit = x > canvas.width - 10;
+    const percuteMurHaut = y < 0;
+    const percuteMurBas = y > canvas.height - 10;
+    return percuteMurGauche || percuteMurDroit || percuteMurHaut || percuteMurBas
+  }
 
  
