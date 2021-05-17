@@ -1,0 +1,50 @@
+canvas, #zoneJeu {
+	width: 100%;
+	height: 100%;
+	max-width: 400px;
+	max-height: 400px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+    margin: 0 auto;
+	border: 4px solid #4E685C;
+	background-color: #87b4a0;
+}
+
+
+/* 980px -> Target laptops */
+	@media only screen and (min-width: 980px) {
+		#zoneJeu {
+			width: 100%;
+			height: 100%;
+			max-width: 400px;
+			max-height: 400px;
+			display: flex;
+		    margin: 0 auto;
+			border: 4px solid #4E685C;
+			background-color: #87b4a0;
+		}
+	}
+/* === END Breakpoint-Media-Queries === */
+
+
+
+   
+/* ===============
+/*	START Zepto <<<
+/* ============================================== */
+@font-face {
+	font-family: 'zeptoregular Web', sans-serif;
+	src: url('../../../assets/fonts/zepto/zepto-webfont.woff') format('woff'),
+		 url('../../../assets/fonts/zepto/zepto-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ==============================================
+/*  >>> END Zepto 
+   ======================= */
+
