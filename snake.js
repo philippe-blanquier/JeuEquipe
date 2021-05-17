@@ -31,7 +31,12 @@ window.onload=function() { //charger la page complete
 function jeu(){
 
     // Si fin de jeu, on arrête le script
-    if (endGame()) return;
+    if (endGame()){
+        contexte.font = '48px Arial';        
+        contexte.fillText('GAME OVER', canvas.width/4, canvas.height/2);        
+        return;
+    } 
+        
 
     contexte.clearRect(0, 0, canvas.width, canvas.height);
     x+=deplacementX*largeur;
@@ -145,7 +150,7 @@ function endGame() {
     const percuteMurDroit = x > canvas.width - 10;
     const percuteMurHaut = y < 0;
     const percuteMurBas = y > canvas.height - 10;
-    return percuteMurGauche || percuteMurDroit || percuteMurHaut || percuteMurBas
+    return percuteMurGauche || percuteMurDroit || percuteMurHaut || percuteMurBas;
   }
 
  
